@@ -1,0 +1,24 @@
+import bonos.*
+import pepe.*
+import categorias.*
+
+describe "Test pepe" {
+	method initialize() {
+		pepe.setPuesto(cadete)
+		pepe.setFaltas(3)
+		pepe.setBonoPresentismo(bonoPorFaltas.monto())
+		pepe.setBonoResultado(bonoFijo.monto())
+	}
+	
+	test "Pepe, gerente, sueldo total 15080, 3 faltas" {
+	assert.equals(15080, pepe.totalSueldo()) // se verifica que 10000 sea = a pepe.sueldoNeto()
+	}
+}
+
+//test "Pepe, gerente, sueldo neto 15000" {
+//	assert.equals(15000, pepe.sueldoNeto()) // se verifica que 15000 sea = a pepe.sueldoNeto()
+//}
+
+// comprobar igualdad con asserts.equals, no con assert.that
+// assert.that para que me de verdadero el test}
+// assetr.not that para que me de falso el test
